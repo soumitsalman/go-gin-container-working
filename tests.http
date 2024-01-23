@@ -1,6 +1,5 @@
-GET http://localhost:8080/ping
+GET http://localhost:8080/contents
 
 GET http://localhost:9000/ping
 
-GET http://localhost:8080/ping
 

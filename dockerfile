@@ -3,18 +3,14 @@ FROM golang:1.22-rc-alpine
 
 WORKDIR /app
 
+# technically you dont need to copy all the files. ONLY the go stuff
 COPY . .
 
 RUN go get
+# or
+RUN go mod download
 
 RUN go build -o bin .
-
-# COPY go.mod .
-# COPY main.go .
-# COPY shared/* ./shared
-
-# RUN go get
-# RUN go build -o bin .
 
 EXPOSE 8080
 
